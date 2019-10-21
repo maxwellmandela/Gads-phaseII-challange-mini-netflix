@@ -1,0 +1,35 @@
+<div class="container main">
+    <div class="row">
+        <div class="col-sm-12">
+            <h5>Welcome to mini netflix app!</h5>
+
+            <br>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="movie-list">
+                        <h6>New movies</h6>
+
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let movie of movies">
+                                <div class="card">
+                                    <img src="{{movie.image}}" class="card-img" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ movie.title }}</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">{{ movie.year }}</h6>
+                                        <p class="card-text">{{ movie.description }}</p>
+                                        <a [routerLink]="['/movies', movie.id]" class="card-link">View Details</a>
+
+                                        <a href="#" (click)="addToFavorites(movie.id)" class="float-right card-link">
+                                            <i class="fa fa-heart"></i> Add to
+                                            Favorites</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container main">
+  <div class="row">
+    <div class="col-sm-12">
+      <h5>Movie Details</h5>
+
+      <br>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="movie-details">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="{{movie.image}}" class="card-img" alt="...">
+              </div>
+
+              <div class="col-md-8">
+                <div class="card">
+
+                  <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ movie.year }}</h6>
+                    <p class="card-text">{{ movie.description }}</p>
+                    <a routerLink="" class="card-link">Back to movies</a>
+                    <a href="#" class="float-right btn btn-outline-primary btn-sm">Add to Favorites</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
