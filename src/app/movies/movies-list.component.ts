@@ -15,13 +15,10 @@ export class MoviesListComponent implements OnInit {
   storage_key = 'mininetflix_favorite_movies'
 
   ngOnInit() {
-    if (localStorage.getItem(this.storage_key)) {
-      this.favorites = JSON.parse(localStorage.getItem(this.storage_key))
-    }
+
   }
 
   addToFavorites(id: Number) {
-    this.favorites.push(id);
-    localStorage.setItem(this.storage_key, JSON.stringify(this.favorites))
+
   }
 }
